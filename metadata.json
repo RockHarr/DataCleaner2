@@ -1,0 +1,5 @@
+{
+  "name": "DataCleaner",
+  "description": "An MVP for a data consolidation and cleaning tool designed for the Chilean public sector. Users can upload multiple CSV files, map different column headers to a unified schema, clean the data with specific rules (like formatting RUTs and standardizing region names), and download the clean, consolidated result.",
+  "requestFramePermissions": []
+}
