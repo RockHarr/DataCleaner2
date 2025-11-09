@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# DataCleaner — RockCode
 
-# Run and deploy your AI Studio app
+MVP para unificar y limpiar planillas CSV del sector público chileno
+(RUT, nombres, regiones, etc.) en un solo dataset utilizable.
 
-This contains everything you need to run your app locally.
+Pensado para equipos de gestión, transparencia, planificación y
+estadísticas que trabajan con datos provenientes de distintas fuentes
+(Excel, sistemas heredados, oficinas regionales).
 
-View your app in AI Studio: https://ai.studio/apps/drive/1u0027zR_46IcRvymmcDv3LO_6SSTHkKk
+## Problema que resuelve
 
-## Run Locally
+En muchos servicios públicos se trabaja con múltiples planillas
+inconsistentes:
 
-**Prerequisites:**  Node.js
+- Columnas con nombres distintos para la misma cosa
+- Filas duplicadas
+- Mayúsculas / minúsculas mezcladas
+- Espacios en blanco, valores vacíos
+- Datos difíciles de consolidar para reportes
 
+DataCleaner ayuda a:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Unificar estructuras simples de datos
+- Limpiar filas y valores
+- Preparar datasets que luego se pueden usar en BI, reportes o cargarse en otros sistemas
+
+## Qué hace (v1)
+
+- Carga de archivo CSV
+- Vista previa de los datos
+- Operaciones básicas de limpieza:
+  - Eliminar filas vacías
+  - Eliminar filas duplicadas
+  - Normalizar texto (trim / minúsculas) en columnas seleccionadas
+- Descarga de un CSV limpio
+
+> Nota: el objetivo de este MVP es trabajar **100% en el navegador**,
+> sin enviar datos a servidores externos, para ser más amigable con
+> requisitos de seguridad de organismos públicos.
+
+## Tecnologías
+
+- React + TypeScript
+- Vite
+- (Opcional) Integración con modelos de IA para sugerencias de limpieza
+
+## Cómo correrlo en local
+
+1. Instalar dependencias:
+
+   ```bash
+   npm install
