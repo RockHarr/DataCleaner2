@@ -1,0 +1,104 @@
+## Guía rápida para usuarios no técnicos
+
+Esta sección está pensada para funcionarias y funcionarios que trabajan
+con planillas Excel/CSV y necesitan limpiar datos sin saber programar.
+
+### ¿Qué es DataCleaner?
+
+DataCleaner es una herramienta simple para:
+
+- abrir una planilla `.csv`,
+- limpiar filas y textos (vacíos, duplicados, espacios, mayúsculas),
+- y descargar una versión más ordenada de la misma planilla.
+
+Todo ocurre **en tu navegador**: los datos no se envían a servidores
+externos.
+
+---
+
+### Paso a paso: ¿cómo usarlo?
+
+1. **Preparar el archivo**
+   - Abre tu planilla en Excel u otra herramienta.
+   - Asegúrate de que tenga encabezados claros (nombres de columnas).
+   - Guarda una copia en formato **CSV** (`Archivo → Guardar como → .csv`).
+
+2. **Abrir DataCleaner**
+   - Abre la aplicación DataCleaner en tu navegador
+     (la URL que te entregó RockCode, por ejemplo:
+     `http://localhost:5173` o una dirección interna).
+
+3. **Subir el archivo**
+   - En la pantalla principal, haz clic en **“Seleccionar archivo”** o
+     el botón equivalente.
+   - Elige tu archivo `.csv`.
+   - Verás una **vista previa** de las primeras filas de la planilla.
+
+4. **Elegir las acciones de limpieza**
+   Según la configuración de tu versión de DataCleaner, podrás marcar
+   opciones como:
+
+   - ✅ **Eliminar filas vacías**  
+     Quita filas donde todas las columnas están vacías.
+
+   - ✅ **Eliminar filas duplicadas**  
+     Quita filas repetidas. Dependiendo de la configuración, puede
+     considerar fila completa o columnas clave.
+
+   - ✅ **Normalizar texto (trim/minúsculas)**  
+     Limpia espacios en blanco al inicio o final y convierte el texto
+     a minúsculas en las columnas seleccionadas, para que los valores
+     sean más consistentes.
+
+5. **Aplicar la limpieza**
+   - Haz clic en el botón **“Limpiar”** o equivalente.
+   - DataCleaner te mostrará un resumen, por ejemplo:
+     - Filas originales: 12.345  
+     - Filas después de limpiar: 11.980  
+     - Filas eliminadas: 365
+
+6. **Descargar el archivo limpio**
+   - Haz clic en **“Descargar CSV limpio”**.
+   - Guarda el archivo en tu computador.
+   - Desde ahí puedes:
+     - Abrirlo en Excel para seguir trabajando, o
+     - Cargarlo en otro sistema o herramienta de análisis.
+
+---
+
+### Buenas prácticas al usar DataCleaner
+
+- **Siempre trabaja con una copia**  
+  No sobreescribas tu archivo original. Guarda el CSV limpio con otro
+  nombre, por ejemplo: `datos_limpios_2025-11-09.csv`.
+
+- **Revisa una muestra**  
+  Después de limpiar, revisa algunas filas al azar para confirmar que
+  lo que se eliminó o transformó tiene sentido.
+
+- **Documenta lo que hiciste**  
+  Si estás trabajando en equipo, anota en un correo o documento:
+  - qué archivo limpiaste,
+  - qué fecha,
+  - qué acciones marcaste (duplicados, vacíos, etc.).
+
+---
+
+### Límites de DataCleaner (v1)
+
+- Está pensado para **planillas simples** (tablas).
+- No corrige errores de significado (por ejemplo, RUT mal digitado)
+  a menos que se agreguen reglas específicas.
+- No reemplaza herramientas BI ni bases de datos, pero **prepara mejor**
+  los datos para usarlas.
+
+---
+
+### Soporte
+
+Si tienes dudas sobre cómo usar DataCleaner en tu institución o quieres
+adaptarlo a tu propio caso, puedes contactar a:
+
+- **RockCode SPA**  
+- Sitio: https://rockcode.cl/  
+- Correo: `rockwell.harrison@gmail.com`
